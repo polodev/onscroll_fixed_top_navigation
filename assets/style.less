@@ -1,66 +1,95 @@
 body {
 
 }
-header {
-	text-align: center;
-	.top_nav {
-		width: 100%;
-		background-color : salmon;
-		height: 70px;
-		.tn_left_content {
-			height : 100%;
-			width: 50%;
-			float: left;
-			span {
-				margin-top: 25px;
-			}
-		}
-		.tn_right_content {
-			height : 100%;
-			width: 50%;
-			float: right;
-		}
-	}
-	h1 {
-		font-family: sans-serif;
-		background-color : red;
-		color : #fff;
-		margin : 0;
-		padding : 50px 0;
-	}
-	nav {
-		background-color: #333;
-		text-align: center;
-		border-bottom: solid 4px #f1f1f1;
-		&.fixed {
-			width: 100%;
-			position: fixed;
-			top: 0;
-			left: 0;
-		}
-		ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			li {
-				display: inline-block;
-				padding: 10px 0;
-				margin: 0;
-				a {
-					padding: 10px 0;
-					text-decoration: none;
-					color: #fff;
-					&:hover {
-						color : #fff;
-						text-decoration: none;
-					}
-				}
-				&:hover {
-					background-color : #555;
-				}
-			}
 
-		}
-	}
+header {
+  text-align: center;
+  .top_nav {
+    width: 100%;
+    background-color : #3a4557;
+    height: 48px;
+    padding-top : 5px;
+    .tn_left_content {
+      height : 100%;
+      width: 50%;
+      float: left;
+      overflow : hidden;
+      .empty_color_box {
+        height : 48px;
+        width : 100%;
+        background-color : #fff;
+        border-radius : 0 30px 0 0;
+      }
+    }
+    .tn_right_content {
+      height : 100%;
+      width: 50%;
+      float: right;
+      display : flex;
+      align-items : center;
+      ul {
+        margin : 0;
+        padding : 0;
+        margin-left : 20px;
+        list-style-type: none;
+        li {
+          display : inline-block;
+          color : #fff;
+          margin-left : 20px;
+          position: relative;
+          a.btn-winner {
+            display: inline-block;
+            color: white;
+            background: seagreen;
+            padding: 2px 15px;
+          }
+          &:after {
+            content: '|';
+            position: absolute;
+            top: 0;
+            right: -10px;
+          }
+          &:last-child:after {
+            content : "";
+          }
+        }
+      }
+    }
+  }
+  nav {
+    background-color: #fff;
+    text-align: center;
+    border-bottom: solid 4px #f1f1f1;
+    &.fixed {
+      width: 100%;
+      height: 50px;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline-block;
+        padding: 10px;
+        margin: 0;
+        a {
+          padding: 10px;
+          text-decoration: none;
+          color: #333;
+          &:hover {
+            text-decoration: none;
+            color : #fff;
+          }
+        }
+        &:hover {
+          background-color : salmon;
+        }
+      }
+
+    }
+  }
 
 }

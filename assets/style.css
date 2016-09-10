@@ -3,36 +3,64 @@ header {
 }
 header .top_nav {
   width: 100%;
-  background-color: salmon;
-  height: 70px;
+  background-color: #3a4557;
+  height: 48px;
+  padding-top: 5px;
 }
 header .top_nav .tn_left_content {
   height: 100%;
   width: 50%;
   float: left;
+  overflow: hidden;
 }
-header .top_nav .tn_left_content span {
-  margin-top: 25px;
+header .top_nav .tn_left_content .empty_color_box {
+  height: 48px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0 30px 0 0;
 }
 header .top_nav .tn_right_content {
   height: 100%;
   width: 50%;
   float: right;
+  display: flex;
+  align-items: center;
 }
-header h1 {
-  font-family: sans-serif;
-  background-color: red;
-  color: #fff;
+header .top_nav .tn_right_content ul {
   margin: 0;
-  padding: 50px 0;
+  padding: 0;
+  margin-left: 20px;
+  list-style-type: none;
+}
+header .top_nav .tn_right_content ul li {
+  display: inline-block;
+  color: #fff;
+  margin-left: 20px;
+  position: relative;
+}
+header .top_nav .tn_right_content ul li a.btn-winner {
+  display: inline-block;
+  color: white;
+  background: seagreen;
+  padding: 2px 15px;
+}
+header .top_nav .tn_right_content ul li:after {
+  content: '|';
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+header .top_nav .tn_right_content ul li:last-child:after {
+  content: "";
 }
 header nav {
-  background-color: #333;
+  background-color: #fff;
   text-align: center;
   border-bottom: solid 4px #f1f1f1;
 }
 header nav.fixed {
   width: 100%;
+  height: 50px;
   position: fixed;
   top: 0;
   left: 0;
@@ -44,18 +72,18 @@ header nav ul {
 }
 header nav ul li {
   display: inline-block;
-  padding: 10px 0;
+  padding: 10px;
   margin: 0;
 }
 header nav ul li a {
-  padding: 10px 0;
+  padding: 10px;
   text-decoration: none;
-  color: #fff;
+  color: #333;
 }
 header nav ul li a:hover {
-  color: #fff;
   text-decoration: none;
+  color: #fff;
 }
 header nav ul li:hover {
-  background-color: #555;
+  background-color: salmon;
 }
